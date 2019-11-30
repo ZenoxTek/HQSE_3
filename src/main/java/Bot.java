@@ -21,14 +21,10 @@ public class Bot {
     }
 
     public String getResponse() {
-        if (this.response != null){
-            return this.response;
-        }
-        return "";
+        return this.response;
     }
 
     public boolean receiveMessage(String message) {
-
         if (message != null){
             return (this.parseMessage(message));
         }

@@ -1,6 +1,8 @@
 public class User {
 
-    String username;
+    private String username;
+    private static final String SAY_FOO = "foo";
+    private static final String EXIT = "++";
 
     public User() { }
 
@@ -13,6 +15,17 @@ public class User {
     }
 
     public void getUserMessage(String msg) {
-        System.out.println("[" + this.username + "]" + " " +  msg + "\n");
+        System.out.println(msg);
+    }
+
+    public void displayUserName() {
+        System.out.print("[" + this.username + "] ");
+    }
+
+    public void sayByeToBot() {
+        displayUserName();
+        System.out.println(SAY_FOO);
+        displayUserName();
+        System.out.println(EXIT);
     }
 }

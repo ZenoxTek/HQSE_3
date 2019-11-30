@@ -4,30 +4,43 @@ import java.io.InputStreamReader;
 
 public class ChatRoom {
 
-    // User Instance
+    private User user;
+    private Bot bot;
 
-    // Bot Instance
 
     public ChatRoom() {
-        // Init user and Bot
+        user = new User();
+        bot = new Bot();
     }
 
-    public void setUserName() {
-
+    public void setUserName(String name) {
+        user.setUserName(name);
+        bot.setUserName(name);
     }
 
     public void initialize() throws IOException {
-        boolean appRunning = true;
         BufferedReader reader =
                 new BufferedReader(new InputStreamReader(System.in));
-        while (appRunning) {
-            String name = reader.readLine();
-            // TODO : Display Command
-
-            // TODO : Trigger Bot
-
-            // TODO: React to Bot response
-        }
+        while (logic(reader));
     }
 
+    private boolean logic(BufferedReader reader) throws IOException {
+        user.displayUserName();
+        String command = reader.readLine();
+        user.getUserMessage(command);
+        if (bot.receiveMessage(command)) {
+            System.out.println(bot.getResponse());
+            user.sayByeToBot();
+            return false;
+        }
+        return true;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public Bot getBot() {
+        return bot;
+    }
 }
