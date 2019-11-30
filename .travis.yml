@@ -9,6 +9,9 @@ if: (type = push AND branch IN (master, Develop, ChatRoom, Develop_user, dev_bot
 
 branches:
   only:
+    - Develop
+    - develop
+    - master
     - /^feature.*$/
 
 after_success:
