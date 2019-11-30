@@ -7,6 +7,7 @@
 - Chat room : https://github.com/ZenoxTek/HQSE_3/pull/12
 - Init travis https://github.com/ZenoxTek/HQSE_3/pull/13
 - Chat room logic : https://github.com/ZenoxTek/HQSE_3/pull/14
+- Parser : https://github.com/ZenoxTek/HQSE_3/pull/16
 
 **Closed issues:**
 - IDEA configuration file : https://github.com/ZenoxTek/HQSE_3/issues/1
