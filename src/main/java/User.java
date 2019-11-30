@@ -1,14 +1,18 @@
-package java;
-
 public class User {
 
-    String name;
+    String username;
 
-    public User(String name) {
-        this.name = name;
+    public User() { }
+
+    public void setUserName(String username) {
+        this.username = username;
+    }
+
+    public String getUserName() {
+        return this.username;
     }
 
     public void getUserMessage(String msg) {
-        System.out.println("[" + this.name + "]" + " " +  msg + "\n");
+        System.out.println("[" + this.username + "]" + " " +  msg + "\n");
     }
 }
