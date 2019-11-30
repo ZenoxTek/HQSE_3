@@ -1,3 +1,4 @@
+import Bot.Bot;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
