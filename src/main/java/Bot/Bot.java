@@ -4,10 +4,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Bot {
-    private String  botName;
-    private String  attribute;
-    private String  response;
-    private String  userName;
+    protected String  botName;
+    protected String  attribute;
+    protected String  response;
+    protected String  userName;
 
     public Bot(String botName, String attribute) {
         this.botName = botName;
@@ -36,7 +36,7 @@ public class Bot {
         return false;
     }
 
-    private void formatResponse() {
+    protected void formatResponse() {
         Date today = new Date();
         SimpleDateFormat formater;
         formater = new SimpleDateFormat("EEEE d MMMM 'et il est' hh'h'mm");
@@ -45,7 +45,7 @@ public class Bot {
                 + formater.format(today) + ".";
     }
 
-    private boolean parseMessage(String message) {
+    protected boolean parseMessage(String message) {
         this.botName = "hello";
         if (message.equals("@" + botName)) {
             this.formatResponse();
