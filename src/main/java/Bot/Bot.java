@@ -1,14 +1,20 @@
+package Bot;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Bot {
-
     private String  botName;
+    private String  attribute;
     private String  response;
     private String  userName;
 
-    Bot(){
+    public Bot(String botName, String attribute) {
+        this.botName = botName;
+        this.attribute = attribute;
+    }
 
+    public Bot() {
     }
 
     public void setUserName(String userName) {
@@ -40,8 +46,8 @@ public class Bot {
     }
 
     private boolean parseMessage(String message) {
-        if (message.equals("@hello")) {
-            this.botName = "hello";
+        this.botName = "hello";
+        if (message.equals("@" + botName)) {
             this.formatResponse();
             System.out.println(getResponse());
             return false;

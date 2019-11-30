@@ -3,7 +3,7 @@
 **Merged pull requests:**
 
 - User Class : https://github.com/ZenoxTek/HQSE_3/pull/9
-- Bot Class : https://github.com/ZenoxTek/HQSE_3/pull/11
+- Bot.Bot Class : https://github.com/ZenoxTek/HQSE_3/pull/11
 - Chat room : https://github.com/ZenoxTek/HQSE_3/pull/12
 - Init travis https://github.com/ZenoxTek/HQSE_3/pull/13
 - Chat room logic : https://github.com/ZenoxTek/HQSE_3/pull/14
