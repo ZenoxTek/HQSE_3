@@ -1,4 +1,5 @@
 # HQSE_3
+[![Build Status](https://travis-ci.com/ZenoxTek/HQSE_3.svg?branch=Develop)](https://travis-ci.com/ZenoxTek/HQSE_3)
 
 **[ETAPE 1]**
 
