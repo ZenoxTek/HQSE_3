@@ -1,0 +1,15 @@
+language: java
+
+install: gradle wrapper --gradle-version 5.2.1
+
+jdk:
+  - oraclejdk11
+
+if: (type = push AND branch IN (master, Develop, ChatRoom, Develop_user, dev_bot)) OR (type = pull_request AND NOT branch =~ /no-ci/)
+
+branches:
+  only:
+    - /^feature.*$/
+
+after_success:
+  - ./gradlew jacocoTestReport coveralls
