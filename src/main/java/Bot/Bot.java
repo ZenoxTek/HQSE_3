@@ -21,12 +21,20 @@ public class Bot {
         this.userName = userName;
     }
 
+    public void setAttribute(String attribute) {
+        this.attribute = attribute;
+    }
+
     public String getUserName() {
         return this.userName;
     }
 
     public String getResponse() {
         return this.response;
+    }
+
+    public String getBotName() {
+        return this.botName;
     }
 
     public boolean receiveMessage(String message) {
@@ -37,17 +45,11 @@ public class Bot {
     }
 
     private void formatResponse() {
-        Date today = new Date();
-        SimpleDateFormat formater;
-        formater = new SimpleDateFormat("EEEE d MMMM 'et il est' hh'h'mm");
-
-        this.response =  "[" + this.botName + "] " + "Salut " + this.userName + " ! Nous sommes "
-                + formater.format(today) + ".";
+        this.response =  "Je ne connais pas le chatbot " + attribute + "!";
     }
 
     private boolean parseMessage(String message) {
-        this.botName = "hello";
-        if (message.equals("@" + botName)) {
+        if (message.equals(botName)) {
             this.formatResponse();
             System.out.println(getResponse());
             return false;
