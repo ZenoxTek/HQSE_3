@@ -4,7 +4,9 @@ public class User {
     private static final String SAY_FOO = "foo";
     private static final String EXIT = "++";
 
-    public User() { }
+    public User() {
+
+    }
 
     public void setUserName(String username) {
         this.username = username;

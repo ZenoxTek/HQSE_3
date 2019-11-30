@@ -25,6 +25,7 @@ group 'org.example'
 version '1.0'
 
 mainClassName = 'Main'
+archivesBaseName = 'chatbot'
 
 sourceCompatibility = 1.8
 

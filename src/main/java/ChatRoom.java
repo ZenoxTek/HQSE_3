@@ -21,7 +21,9 @@ public class ChatRoom {
     public void initialize() throws IOException {
         BufferedReader reader =
                 new BufferedReader(new InputStreamReader(System.in));
-        while (logic(reader));
+        while (logic(reader)) {
+
+        }
         reader.close();
     }
 

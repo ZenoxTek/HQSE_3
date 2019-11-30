@@ -10,19 +10,20 @@ public class Parser {
         this.argumentsReceived = args;
     }
 
-    public String     getArgumentsAtIndex(int index){
-        if (this.argumentsToReturn != null){
-            if (index < this.argumentsToReturn.size() && index >= 0){
+    public String     getArgumentsAtIndex(int index) {
+        if (this.argumentsToReturn != null) {
+            if (index < this.argumentsToReturn.size() && index >= 0) {
                 return this.argumentsToReturn.get(index);
             }
         }
         return null;
     }
 
-    public boolean parse(){
-        if (this.argumentsReceived != null){
-            for (int i = 0 ; i < this.argumentsReceived.length ; i++){
-                if (this.argumentsReceived[i].equals("-p") && i + 1 < this.argumentsReceived.length){
+    public boolean parse() {
+        if (this.argumentsReceived != null) {
+            for (int i = 0; i < this.argumentsReceived.length; i++) {
+                if (this.argumentsReceived[i].equals("-p")
+                        && i + 1 < this.argumentsReceived.length) {
                     this.argumentsToReturn.add(this.argumentsReceived[i + 1]);
                     return true;
                 }
