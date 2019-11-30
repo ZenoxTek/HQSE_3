@@ -13,7 +13,6 @@ public class Parser {
     public String     getArgumentsAtIndex(int index){
         if (this.argumentsToReturn != null){
             if (index < this.argumentsToReturn.size() && index >= 0){
-                System.out.println(this.argumentsToReturn.get(index));
                 return this.argumentsToReturn.get(index);
             }
         }
