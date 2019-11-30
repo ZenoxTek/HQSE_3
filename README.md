@@ -51,3 +51,11 @@ le message “++”.
 **[ETAPE 2]**
 
 Module Epitech CleanCodeTP jour 3
+
+**CREDITS**
+
+Developpers :
+
+Elodie BERTHAUD
+Remi DE LIMA
+Benjamin DUHIEU
