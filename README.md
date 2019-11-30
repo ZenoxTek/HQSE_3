@@ -6,10 +6,11 @@ L’objectif de cette étape sera d’implémenter une session de chat
 ou on pourra préciser quel pseudo nous souhaitons utiliser, ainsi qu’un chatbot basique qui ne fera que répondre bonjour ainsi que la date et l’heure lorsqu’on le mentionne, comme sur l’exemple suivant.
 
 
+```
 shell$ java -jar chatbot.jar -p toto
 
 
-```[toto] @hello
+[toto] @hello
 
 [hello] Salut toto! Nous sommes Jeudi 25 octobre et il est 14h30. 
 
