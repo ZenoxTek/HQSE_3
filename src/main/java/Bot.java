@@ -10,7 +10,9 @@ public class Bot {
     private String  response;
     private String  userName;
 
-    Bot(){}
+    Bot(){
+
+    }
 
     public void setUserName(String userName) {
         this.userName = userName;
@@ -21,15 +23,11 @@ public class Bot {
     }
 
     public String getResponse() {
-        if (this.response != null){
-            return this.response;
-        }
-        return "";
+        return this.response;
     }
 
     public boolean receiveMessage(String message) {
-
-        if (message != null){
+        if (message != null) {
             return (this.parseMessage(message));
         }
         return false;
@@ -40,11 +38,12 @@ public class Bot {
         SimpleDateFormat formater;
         formater = new SimpleDateFormat("EEEE d MMMM 'et il est' hh'h'mm");
 
-        this.response =  "[" + this.botName + "] " + "Salut " + this.userName + " ! Nous sommes " + formater.format(today) + ".";
+        this.response =  "[" + this.botName + "] " + "Salut " + this.userName + " ! Nous sommes "
+                + formater.format(today) + ".";
     }
 
     private boolean parseMessage(String message) {
-        if (message.equals("@hello")){
+        if (message.equals("@hello")) {
             this.botName = "hello";
             this.formatResponse();
             return true;

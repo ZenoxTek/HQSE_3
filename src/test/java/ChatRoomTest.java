@@ -6,9 +6,9 @@ public class ChatRoomTest {
 
     @Test
     public void setUserName() {
-    }
-
-    @Test
-    public void initialize() {
+        ChatRoom chatRoom = new ChatRoom();
+        chatRoom.setUserName("toto");
+        assertEquals("toto", chatRoom.getUser().getUserName());
+        assertEquals("toto", chatRoom.getBot().getUserName());
     }
 }
