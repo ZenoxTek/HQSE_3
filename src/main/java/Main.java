@@ -4,6 +4,6 @@ public class Main {
         // TODO: Parse string
         // TODO: Initialize User
         // TODO: Initialize Bot
+        // test
     }
-
 }
