@@ -1,10 +1,11 @@
-package java;
+import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // TODO: Parse string
-        // TODO: Initialize User
-        // TODO: Initialize Bot
+        ChatRoom chatRoom = new ChatRoom();
+        chatRoom.setUserName("Toto");
+        chatRoom.initialize();
     }
 }
