@@ -51,6 +51,41 @@ le message “++”.
 
 **[ETAPE 2]**
 
+Un système de chargement de bots avec traitement des erreurs
+Avant d’aller plus loin dans le projet, il vous est demandé de vous
+poser un instant et de réfléchir à l’architecture de votre application.
+
+Jusqu'à présent, nous avons eu à utiliser qu’un seul chatbot, cependant,
+dans la suite de ce projet, il nous sera possible de discuter avec une multitude de chatbots.
+
+Il va donc falloir pouvoir charger autant de chatbots que nécessaire,
+de s’assurer que chaque chatbot a bien un nom unique, de lui transmettre les messages qui lui sont adressés ainsi que les arguments dont il a besoin, de gérer les situations ou le chatbot adressé n’existe pas.
+
+L’exemple suivant montre un exemple d’utilisation de la nouvelle
+version.
+
+```
+shell$ java -jar chatbot.jar -p toto
+
+
+[toto] @hello
+
+[hello] Salut toto!
+
+[toto] @time Europe/Paris
+
+[time] Nous sommes Jeudi 25 octobre et il est 14h30.
+
+[toto] @time
+
+[time] Désolé mais il me manque la zone pour afficher l’heure.
+
+[toto] @foo
+
+[system] Je ne connais pas le chatbot @foo!
+```
+
+
 Module Epitech CleanCodeTP jour 3
 
 **CREDITS**
