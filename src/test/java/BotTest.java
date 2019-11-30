@@ -33,7 +33,7 @@ public class BotTest {
         Bot bot = new Bot();
         bot.setUserName("Toto");
 
-        assertTrue(bot.receiveMessage("@hello"));
+        assertTrue(bot.receiveMessage("++"));
     }
 
     @Test
@@ -41,7 +41,7 @@ public class BotTest {
         Bot bot = new Bot();
         bot.setUserName("Toto");
 
-        assertFalse(bot.receiveMessage("@bonjour"));
+        assertFalse(bot.receiveMessage("@hello"));
     }
 
     @Test

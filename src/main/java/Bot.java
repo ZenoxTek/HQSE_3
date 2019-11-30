@@ -43,8 +43,9 @@ public class Bot {
         if (message.equals("@hello")) {
             this.botName = "hello";
             this.formatResponse();
-            return true;
+            System.out.println(getResponse());
+            return false;
         }
-        return false;
+        return message.equals("++");
     }
 }
