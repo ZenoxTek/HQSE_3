@@ -22,15 +22,13 @@ public class ChatRoom {
         BufferedReader reader =
                 new BufferedReader(new InputStreamReader(System.in));
         while (logic(reader));
+        reader.close();
     }
 
     private boolean logic(BufferedReader reader) throws IOException {
         user.displayUserName();
         String command = reader.readLine();
-        user.getUserMessage(command);
         if (bot.receiveMessage(command)) {
-            System.out.println(bot.getResponse());
-            user.sayByeToBot();
             return false;
         }
         return true;

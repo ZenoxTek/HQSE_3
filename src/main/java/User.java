@@ -14,18 +14,7 @@ public class User {
         return this.username;
     }
 
-    public void getUserMessage(String msg) {
-        System.out.println(msg);
-    }
-
     public void displayUserName() {
         System.out.print("[" + this.username + "] ");
-    }
-
-    public void sayByeToBot() {
-        displayUserName();
-        System.out.println(SAY_FOO);
-        displayUserName();
-        System.out.println(EXIT);
     }
 }
