@@ -49,10 +49,17 @@ public class ParserTest {
         assertFalse(parser.parse());
     }
 
-
     @Test
     public void parseWithOnlyOption() {
         String[]    args = {"-p"};
+        Parser      parser = new Parser(args);
+
+        assertFalse(parser.parse());
+    }
+
+    @Test
+    public void parseWithWrongOption() {
+        String[]    args = {"-o", "toto"};
         Parser      parser = new Parser(args);
 
         assertFalse(parser.parse());
